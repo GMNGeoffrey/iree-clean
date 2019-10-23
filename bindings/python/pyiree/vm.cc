@@ -12,19 +12,26 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef IREE_BINDINGS_PYTHON_PYIREE_COMPILER_H_
-#define IREE_BINDINGS_PYTHON_PYIREE_COMPILER_H_
+#include "bindings/python/pyiree/vm.h"
 
-#include <string>
-
-#include "iree/bindings/python/pyiree/binding.h"
+#include "bindings/python/pyiree/status_utils.h"
 
 namespace iree {
 namespace python {
 
-void SetupCompilerBindings(pybind11::module m);
+RtModule CreateModuleFromBlob(std::shared_ptr<OpaqueBlob> blob) {
+  iree_rt_module_t* module;
+  auto free_fn = OpaqueBlob::CreateFreeFn(blob);
+  auto status = iree_vm_bytecode_module_create_from_buffer(
+      {static_cast<const uint8_t*>(blob->data()), blob->size()}, free_fn.first,
+      free_fn.second, IREE_ALLOCATOR_DEFAULT, &module);
+  CheckApiStatus(status, "Error creating vm module from blob");
+  return RtModule::CreateRetained(module);
+}
+
+void SetupVmBindings(pybind11::module m) {
+  m.def("create_module_from_blob", CreateModuleFromBlob);
+}
 
 }  // namespace python
 }  // namespace iree
-
-#endif  // IREE_BINDINGS_PYTHON_PYIREE_COMPILER_H_

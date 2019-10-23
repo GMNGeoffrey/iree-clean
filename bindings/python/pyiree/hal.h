@@ -15,8 +15,8 @@
 #ifndef IREE_BINDINGS_PYTHON_PYIREE_HAL_H_
 #define IREE_BINDINGS_PYTHON_PYIREE_HAL_H_
 
-#include "iree/bindings/python/pyiree/binding.h"
-#include "iree/bindings/python/pyiree/status_utils.h"
+#include "bindings/python/pyiree/binding.h"
+#include "bindings/python/pyiree/status_utils.h"
 #include "iree/hal/api.h"
 
 namespace iree {

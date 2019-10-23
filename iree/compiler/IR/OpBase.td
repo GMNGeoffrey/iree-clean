@@ -124,7 +124,7 @@ def IREELL_1DIndexMemRef : MemRefRankOf<[IREELL_Index], [1]>;
 //===----------------------------------------------------------------------===//
 
 // Values are FourCC codes.
-// See https://github.com/google/iree/tree/master/iree/hal/executable_format.h for more info.
+// See https://github.com/google/iree/tree/master/iree/iree/hal/executable_format.h for more info.
 // https://ubershmekel.github.io/fourcc-to-text/ can be used to generate the
 // integer values for inclusion here.
 //
@@ -144,7 +144,7 @@ def IREE_ExecutableFormatAttr :
   let convertFromStorage = "static_cast<uint32_t>($_self.getInt())";
   let cppNamespace = "::mlir::iree_compiler::IREE";
 }
-// LINT.ThenChange(//iree/hal/executable_format.h:fourcc)
+// LINT.ThenChange(//iree/iree/hal/executable_format.h:fourcc)
 
 // Use no padding and clamp the window to the valid area, possibly stopping
 // early prior to having covered all data.

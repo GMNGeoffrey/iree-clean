@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "iree/bindings/python/pyiree/binding.h"
+#include "bindings/python/pyiree/binding.h"
 
-#include "iree/bindings/python/pyiree/compiler.h"
-#include "iree/bindings/python/pyiree/hal.h"
-#include "iree/bindings/python/pyiree/initialize.h"
-#include "iree/bindings/python/pyiree/rt.h"
-#include "iree/bindings/python/pyiree/status_utils.h"
-#include "iree/bindings/python/pyiree/vm.h"
+#include "bindings/python/pyiree/compiler.h"
+#include "bindings/python/pyiree/hal.h"
+#include "bindings/python/pyiree/initialize.h"
+#include "bindings/python/pyiree/rt.h"
+#include "bindings/python/pyiree/status_utils.h"
+#include "bindings/python/pyiree/vm.h"
 
 namespace iree {
 namespace python {

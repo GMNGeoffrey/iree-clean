@@ -76,7 +76,7 @@ py_test(
     python_version = "PY3",
     deps = [
         ":binding",
-        "//iree/bindings/python:pathsetup",
+        "//bindings/python:pathsetup",
         "@absl_py//absl/testing:absltest",
     ],
 )
@@ -87,7 +87,7 @@ py_test(
     python_version = "PY3",
     deps = [
         ":binding",
-        "//iree/bindings/python:pathsetup",
+        "//bindings/python:pathsetup",
         "@absl_py//absl/testing:absltest",
     ],
 )

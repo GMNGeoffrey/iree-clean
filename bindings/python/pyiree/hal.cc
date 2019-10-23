@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "iree/bindings/python/pyiree/hal.h"
+#include "bindings/python/pyiree/hal.h"
 
 #include "iree/hal/api.h"
 

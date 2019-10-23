@@ -15,8 +15,8 @@
 #ifndef IREE_BINDINGS_PYTHON_PYIREE_VM_H_
 #define IREE_BINDINGS_PYTHON_PYIREE_VM_H_
 
-#include "iree/bindings/python/pyiree/binding.h"
-#include "iree/bindings/python/pyiree/rt.h"
+#include "bindings/python/pyiree/binding.h"
+#include "bindings/python/pyiree/rt.h"
 #include "iree/vm/api.h"
 
 namespace iree {

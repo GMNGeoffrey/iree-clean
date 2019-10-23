@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "iree/bindings/python/pyiree/rt.h"
+#include "bindings/python/pyiree/rt.h"
 
+#include "bindings/python/pyiree/status_utils.h"
 #include "iree/base/api.h"
-#include "iree/bindings/python/pyiree/status_utils.h"
 #include "iree/hal/api.h"
 
 namespace iree {

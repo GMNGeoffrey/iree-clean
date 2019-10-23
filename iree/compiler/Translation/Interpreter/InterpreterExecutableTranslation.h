@@ -26,7 +26,7 @@ namespace iree_compiler {
 
 // Translates an MLIR module into a bytecode interpreter executable.
 // These executables are stored as IREE modules as defined in the
-// https://github.com/google/iree/tree/master/iree/schemas/module_def.fbs
+// https://github.com/google/iree/tree/master/iree/iree/schemas/module_def.fbs
 // schema.
 llvm::Optional<ExecutableTranslationResult>
 translateExecutableToInterpreterExecutable(

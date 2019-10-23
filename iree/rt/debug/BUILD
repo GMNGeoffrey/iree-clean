@@ -61,7 +61,7 @@ package(
 #         "//iree/schemas",
 #         "//iree/base:status",
 #     ] + select({
-#         "//iree:debug": [":debug_server_tcp"],
+#         "//third_party/iree:debug": [":debug_server_tcp"],
 #         "//conditions:default": [":debug_server_disabled"],
 #     }),
 # )
@@ -127,7 +127,7 @@ cc_library(
 #     srcs = ["debug_server_flags.cc"],
 #     hdrs = ["debug_server_flags.h"],
 #     copts = select({
-#         "//iree:debug": [
+#         "//third_party/iree:debug": [
 #             "-DIREE_DEBUG_EMBEDDED_APP_PRESENT=1",
 #         ],
 #         "//conditions:default": [],
@@ -139,7 +139,7 @@ cc_library(
 #         "//iree/base:memory",
 #         "//iree/base:status",
 #     ] + select({
-#         "//iree:debug": [
+#         "//third_party/iree:debug": [
 #             "//iree/tools/debugger:debug_app_embedded",
 #             "//third_party/GL/native:EGL",  # build-cleaner: keep
 #             "//third_party/GL/native:GLESv2",  # build-cleaner: keep
