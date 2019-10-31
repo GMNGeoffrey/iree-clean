@@ -28,7 +28,6 @@
 #include "mlir/Parser.h"
 #include "mlir/Pass/PassManager.h"
 #include "mlir/Pass/PassRegistry.h"
-#include "third_party/llvm/llvm-project/llvm/include/llvm/Support/raw_ostream.h"
 
 namespace py = pybind11;
 
